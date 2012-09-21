@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# Il file gexf da usare
+GEXF_FILE=example/test.gexf
+
+# l'output folder dove saranno messi i frame
+OUTPUT=/tmp/video.mp4
+
+########################
+#
+#usage: moviemaker
+# -g,--gexf <arg>       gexf file to import
+# -o,--out <arg>        output directory for svg frames
+# -s,--start <arg>      start time value - double format
+# -e,--end <arg>        end time value - double format
+# -i,--interval <arg>   filtered interval in seconds
+#
+########################
+
+# mvn exec:java -Dexec.mainClass="moviemaker.Main" -Dexec.args="--gexf $GEXF_FILE --out $OUTPUT --start 9.25 --end 10 --interval 1200"
+
+mvn exec:java -Dexec.mainClass="moviemaker.Main2" -Dexec.args="--gexf $GEXF_FILE --out $OUTPUT"

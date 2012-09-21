@@ -1,0 +1,199 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>moviemaker</groupId>
+  <artifactId>moviemaker</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <build>
+    <sourceDirectory>src</sourceDirectory>
+    <resources>
+      <resource>
+        <directory>src</directory>
+        <excludes>
+          <exclude>**/*.java</exclude>
+        </excludes>
+      </resource>
+    </resources>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>2.3.2</version>
+        <configuration>
+          <source>1.6</source>
+          <target>1.6</target>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+	<!-- Repositories -->
+	<repositories>
+		<repository>
+			<id>netbeans</id>
+			<name>NetBeans</name>
+			<url>http://bits.netbeans.org/maven2/</url>
+		</repository>
+		<repository>
+			<id>gephi</id>
+			<name>Gephi</name>
+			<url>http://nexus.gephi.org/nexus/content/repositories/public/</url>
+		</repository>
+		<repository>
+			<id>gephi-3rdparty</id>
+			<name>Gephi 3rd Party</name>
+			<url>http://nexus.gephi.org/nexus/content/repositories/thirdparty/</url>
+		</repository>
+		<repository>
+			<id>xuggle repo</id>
+			<url>http://xuggle.googlecode.com/svn/trunk/repo/share/java/</url>
+		</repository>
+	</repositories>
+
+    <dependencies>
+
+        <!-- Netbeans API that forms the basis for Gephi plugin integration -->
+        <dependency>
+            <groupId>org.netbeans.api</groupId>
+            <artifactId>org-netbeans-api-annotations-common</artifactId>
+            <version>RELEASE712</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.netbeans.modules</groupId>
+            <artifactId>org-netbeans-modules-masterfs</artifactId>
+            <version>RELEASE712</version>
+        </dependency>
+        
+		<dependency>
+			<groupId>org.netbeans.api</groupId>
+			<artifactId>org-openide-nodes</artifactId>
+			<version>RELEASE712</version>
+		</dependency>
+
+        <!-- Gephi libraries and extension points -->
+
+        <dependency>
+            <groupId>org.gephi</groupId>
+            <artifactId>graph-api</artifactId>
+            <version>0.8.2-SNAPSHOT</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.gephi</groupId>
+            <artifactId>graph-dhns</artifactId>
+            <version>0.8.2-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.gephi</groupId>
+            <artifactId>attributes-api</artifactId>
+            <version>0.8.2-SNAPSHOT</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.gephi</groupId>
+            <artifactId>attributes-impl</artifactId>
+            <version>0.8.2-SNAPSHOT</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.gephi</groupId>
+            <artifactId>filters-api</artifactId>
+            <version>0.8.2-SNAPSHOT</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.gephi</groupId>
+            <artifactId>filters-impl</artifactId>
+            <version>0.8.2-SNAPSHOT</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.gephi</groupId>
+            <artifactId>filters-plugin</artifactId>
+            <version>0.8.2-SNAPSHOT</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.gephi</groupId>
+            <artifactId>preview-api</artifactId>
+            <version>0.8.2-SNAPSHOT</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.gephi</groupId>
+            <artifactId>preview-plugin</artifactId>
+            <version>0.8.2-SNAPSHOT</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.gephi</groupId>
+            <artifactId>dynamic-api</artifactId>
+            <version>0.8.2-SNAPSHOT</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.gephi</groupId>
+            <artifactId>dynamic-impl</artifactId>
+            <version>0.8.2-SNAPSHOT</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.gephi</groupId>
+            <artifactId>import-api</artifactId>
+            <version>0.8.2-SNAPSHOT</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.gephi</groupId>
+            <artifactId>layout-plugin</artifactId>
+            <version>0.8.2-SNAPSHOT</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.gephi</groupId>
+            <artifactId>processor-plugin</artifactId>
+            <version>0.8.2-SNAPSHOT</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.gephi</groupId>
+            <artifactId>visualization-api</artifactId>
+            <version>0.8.2-SNAPSHOT</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.gephi</groupId>
+            <artifactId>preview-export</artifactId>
+            <version>0.8.2-SNAPSHOT</version>
+        </dependency>
+       
+        <dependency>
+            <groupId>org.gephi</groupId>
+            <artifactId>import-plugin</artifactId>
+            <version>0.8.2-SNAPSHOT</version>
+        </dependency>
+
+
+		<dependency>
+			<groupId>xuggle</groupId>
+			<artifactId>xuggle-xuggler</artifactId>
+			<version>5.2</version>
+		</dependency>
+		
+        <dependency>
+            <groupId>org.apache.xmlgraphics</groupId>
+            <artifactId>batik-codec</artifactId>
+            <version>1.7</version>
+        </dependency>
+        
+		<dependency>
+		    <groupId>commons-cli</groupId>
+		    <artifactId>commons-cli</artifactId>
+		    <version>1.2</version>
+		</dependency>
+            
+        
+    </dependencies>
+
+
+</project>
